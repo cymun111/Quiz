@@ -3,13 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style media="screen">
+      #useraddsquestion {display: none;}
+    </style>
   </head>
   <body>
-    <button type="text" onClick="firstQuestion()">Take Test</button>
- <button type="text" onClick="sumTotal()">Grade Test</button>
- <p id="results"></p>
- <script src="quiz.js" type="text/javascript">
-
- </script>
+    <p id="questionOutput"></p>
+    <p id="answerOpt1"></p>
+    <p id="answerOpt2"></p>
+    <p id="answerOpt3"></p>
+    <p id="answerOpt4"></p>
+    <button type="button" onclick="startQuiz()">Start Quiz</button>
+    <button id="submitButton"type="button" onclick="nextQuestion()" disabled>Sumbit Answer</button>
+    <input id="answerInput" type="text" placeholder="Your Answer Here">
+    <button type="button" onclick="showAddQuestion()">Add Your Own Questions!</button>
+    <div id="useraddsquestion">
+      <input id="newQuestion" type="text" placeholder="Add your new question here"><br>
+      <input id="newQuestionAnswer" type="text" placeholder="Answer to your new Question"><br>
+      <input id="newQuestionOpt1" type="text" placeholder="First Answer Option"><br>
+      <input id="newQuestionOpt2" type="text" placeholder="Second Answer Option"><br>
+      <input id="newQuestionOpt3" type="text" placeholder="Third Answer Option"><br>
+      <input id="newQuestionOpt4" type="text" placeholder="Fouth Answer Option"><br>
+      <button type="button" onclick="addaddQuestion()">Add Your Question</button><br><br>
+    </div>
+ <script src="quiz.js" type="text/javascript"></script>
   </body>
 </html>
